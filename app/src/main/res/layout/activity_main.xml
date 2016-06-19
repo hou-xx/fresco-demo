@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     tools:context="com.hxx.frecsodemo.MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="开始播放"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
         app:layout_constraintTop_toTopOf="@+id/activity_main" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_leftTop"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/default_icon"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderWidth="2dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_leftBottom"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
+        fresco:placeholderImage="@drawable/default_icon" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_rightTop"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        fresco:placeholderImage="@drawable/default_icon" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_rightBottom"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        fresco:placeholderImage="@drawable/default_icon" />
+
 
 </android.support.constraint.ConstraintLayout>
