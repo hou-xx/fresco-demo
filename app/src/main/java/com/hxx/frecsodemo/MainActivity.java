@@ -42,7 +42,11 @@ public class MainActivity extends AppCompatActivity {
         initImage();
     }
 
+    /**
+     * 为SimpleDraweeView绑定图片地址
+     */
     private void initImage() {
+        //设置gif图自动播放
         AbstractDraweeController controller = Fresco.newDraweeControllerBuilder().setUri(urlGif)
                 .setAutoPlayAnimations(true).build();
         imageLeftTop.setImageURI(Uri.parse(urlDog));
@@ -51,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         imageRightBottom.setImageURI(Uri.parse(urlLast));
     }
 
+    /**
+     * 对textview点击监听，控制gif图播放
+     */
     @OnClick(R.id.text)
     public void onClick() {
         Animatable animatableRT = imageRightTop.getController().getAnimatable();
