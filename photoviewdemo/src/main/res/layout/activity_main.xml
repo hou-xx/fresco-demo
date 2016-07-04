@@ -8,10 +8,10 @@
     android:orientation="vertical"
     tools:context="com.hxx.photoviewdemo.MainActivity">
 
-    <PhotoView
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/photoview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
