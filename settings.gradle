@@ -1,1 +1,1 @@
-include ':app', ':listviewdemo', ':photoviewdemo', ':countdowndemo', ':flexboxlayoutdemo'
+include ':app', ':listviewdemo', ':photoviewdemo', ':countdowndemo', ':flexboxlayoutdemo', ':translucentstatus'
